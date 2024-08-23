@@ -1,0 +1,295 @@
+body {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dccdba;
+}
+
+header {
+    padding: 1%;
+    background-color: #000000;
+    color: white;
+}
+
+header ul{
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    padding: 1%;
+    background-color: #000000;
+    color: white;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+header a img {
+    vertical-align: middle;
+    height: 70px;
+}
+
+header a img:hover {
+    border-bottom: 2px solid yellow;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+	border-bottom: 2px solid red;
+}
+
+.box-immagini {
+    max-width: 100%;
+    margin: 20px auto; 
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.animation {
+    display: flex;
+    animation: slide 20s infinite;
+}
+
+.animation img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+body p {
+    font-style: italic;
+    font-size: 1.4em;
+    margin-left: 1%;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+iframe {
+    margin-left: 31%;
+}
+
+article div {
+    display: flex;
+    flex-direction: row;
+}
+article img {
+    object-fit: cover;
+    width: 100%;
+    min-width: 20%;
+    max-width: 100%;
+    margin: 2%;
+}
+
+#manga img, #anime img, #live img {
+    object-fit: cover;
+    width: 100%; 
+    max-width: 200px;
+    height: auto;
+    margin: 10px;
+}
+
+#info {
+ text-align: center;
+}
+
+.personaggi {
+    background-color: white;
+}
+
+#personaggi {
+    display: flex;
+    flex-direction: row;
+}
+
+#personaggi img {
+    object-fit: cover;
+    min-width: 20%;
+    max-width: 100%;
+    margin: 2%;
+    height: auto;
+}
+
+#pulsanti {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1%;
+}
+
+#avanti {
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #dccdba;
+    color: #3f2d29;
+}
+
+#indietro {
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #dccdba;
+    color: #3f2d29;
+}
+
+#inizia {
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #dccdba;
+    color: #3f2d29;
+}
+
+#indietro:hover, #avanti:hover, #startStop:hover, #inizia:hover {
+    background-color: #3f2d29;;
+    color: #dccdba;
+}
+
+#startStop {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #dccdba;
+    color: #3f2d29;
+}
+
+
+#quiz {
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 5%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .box-immagini {
+        margin: 10px auto;
+    }
+
+    article div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    iframe {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #personaggi {
+        flex-direction: column;
+    }
+    
+    #personaggi img {
+        min-width: 50%; 
+    }
+
+    #manga, #anime, #live {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #manga img, #anime img, #live img {
+        width: 80%;
+        height: auto;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    #pulsanti {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header a {
+        font-size: 20px;
+    }
+
+    header a img {
+        height: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .animation img {
+        width: 100%;
+    }
+
+    article img {
+        min-width: 50%;
+        margin: 5% auto;
+    }
+    
+    #personaggi img {
+        min-width: 50%;
+        margin: 0% auto;
+    }
+
+    #manga, #anime, #live {
+        flex-direction: column;
+    }
+
+    #manga img, #anime img, #live img {
+        width: 100%;
+        height: auto;
+        margin: 10px 0; 
+    }
+
+    #pulsanti {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #avanti, #indietro, #startStop {
+        margin: 5px;
+    }
+}
