@@ -104,18 +104,24 @@ article div {
 }
 article img {
     object-fit: cover;
-    width: 100%;
     min-width: 20%;
     max-width: 50%;
     margin: 2%;
 }
 
-#manga img, #anime img, #live img {
-    object-fit: cover;
-    width: 100%; 
-    max-width: 200px;
+#manga img, #anime img, #live img{
+    object-fit: cover; 
     height: auto;
-    margin: 10px;
+    max-width: 50%;
+    margin: 2%;
+}
+
+#videogiochi img {
+    object-fit: contain; 
+    height: auto;
+    min-width: 50%;
+    max-width: 50%;
+    margin: 2%;
 }
 
 #info {
@@ -186,17 +192,15 @@ article img {
     text-align: center;
     color: white;
     background-image: url("../immagini/quiz.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
     object-fit: cover;
 }
 
 #quiz span {
+    text-align: center;
+    color: white;
     font-size: 1.5em;
 }
 
@@ -242,14 +246,13 @@ article img {
         min-width: 50%; 
     }
 
-    #manga, #anime, #live {
+    #manga, #anime, #live, #videogiochi {
         flex-direction: column;
         align-items: center;
     }
 
-    #manga img, #anime img, #live img {
-        height: auto;
-        max-width: 50%;
+    #manga img, #anime img, #live img, #videogiochi img {
+        width: 50%;
         margin: 10px 0;
     }
 
@@ -261,6 +264,8 @@ article img {
     #quiz {
         height: auto;
         background-size: cover;
+        background-position: center top;
+        padding: 10%;
     }
 }
 
@@ -291,14 +296,14 @@ article img {
         margin: 0% auto;
     }
 
-    #manga, #anime, #live {
+    #manga, #anime, #live, #videogiochi {
         flex-direction: column;
     }
 
-    #manga img, #anime img, #live img {
-        width: 50%;
-        height: auto;
-        margin: 10px 0; 
+    #manga img, #anime img, #live img, #videogiochi img {
+        min-width: 50%;
+        max-width: 50%;
+        margin: 5% auto; 
     }
 
     #pulsanti {
@@ -314,6 +319,7 @@ article img {
     #quiz {
         height: auto;
         background-size: cover;
-        padding: 10px;
+        background-position: center;
+        padding: 0%;
     }
 }
